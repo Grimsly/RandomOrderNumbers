@@ -42,7 +42,9 @@ I will preface this by saying that I have had used this solution before, so it w
 
 There were other different ways that I could have solved it like using the LINQ's OrderBy() method instead and then inserting a random number into it like so, OrderBy(r => rand.Next()).
 The entire process would have been done in just one line 
-		List<int> list = Enumerable.Range(1, 10000).OrderBy(r => rand.Next()).ToList();
+
+	List<int> list = Enumerable.Range(1, 10000).OrderBy(r => rand.Next()).ToList();
+	
 But I did more research into it and found out that OrderBy() uses QuickSort which is O(n log n) and in the worst case, O(n^2)
 
 The other way I thought of then was for efficiency was to go through the entire list, get a random number from 0 to List.Count - 1 (which is the last element of the list),
