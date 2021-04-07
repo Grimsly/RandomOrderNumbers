@@ -6,7 +6,7 @@
 
 1) To run the program in a Windows machine using the command prompt, first cd in to the folder containing the cs files, enter in 
 	
- C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /out:RandomOrderNumbers.exe Program.cs Shuffle.cs
+ 	C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /out:RandomOrderNumbers.exe Program.cs Shuffle.cs
 
 2) Then just run the compiled build by entering
 	
@@ -49,13 +49,13 @@ and then swap the current index's element with the element at the index using th
 The runtime is O(n) which is better for much bigger datasets than O(n log n) and O(n^2)
 The problem was with that solution, there are chances that I could be swapping the same number multiple times, like for example with a list of 1-5:
 
-1 2 3 4 5
+**1 2 3 4 5**
 
-3 2 1 4 5	Current index is 0 (element being 1) and 1 got swapped with 3
+**3 2 1 4 5**	Current index is 0 (element being 1) and 1 got swapped with 3
 
-3 1 2 4 5	Current index is 1 (element being 2) and 2 got swapped with 1 again
+**3 1 2 4 5**	Current index is 1 (element being 2) and 2 got swapped with 1 again
 
-3 2 1 4 5	Current index is 2 (element being 2) and 2 got swapped with 1 again
+**3 2 1 4 5**	Current index is 2 (element being 2) and 2 got swapped with 1 again
 
 And this can keep going on again and again with 4 being swapped with 1 and then the same with 5.
 This can help introduce a bias where certain permutations will appear more often than other randomly ordered sets, instead of all permutations having an even chance.
