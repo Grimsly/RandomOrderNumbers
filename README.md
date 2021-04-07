@@ -41,7 +41,8 @@ Other classes can also use the shuffle function if ever the project were to expa
 I will preface this by saying that I have had used this solution before, so it was not really new to me.
 
 There were other different ways that I could have solved it like using the LINQ's OrderBy() method instead and then inserting a random number into it like so, OrderBy(r => rand.Next()).
-The entire process would have been done in just one line List<int> list = Enumerable.Range(1, 10000).OrderBy(r => rand.Next()).ToList();
+The entire process would have been done in just one line 
+		List<int> list = Enumerable.Range(1, 10000).OrderBy(r => rand.Next()).ToList();
 But I did more research into it and found out that OrderBy() uses QuickSort which is O(n log n) and in the worst case, O(n^2)
 
 The other way I thought of then was for efficiency was to go through the entire list, get a random number from 0 to List.Count - 1 (which is the last element of the list),
@@ -51,11 +52,11 @@ The problem was with that solution, there are chances that I could be swapping t
 
 **1 2 3 4 5**
 
-**3 2 1 4 5**			Current index is 0 (element being 1) and 1 got swapped with 3
+**3 2 1 4 5**			       Current index is 0 (element being 1) and 1 got swapped with 3
 
-**3 1 2 4 5**			Current index is 1 (element being 2) and 2 got swapped with 1 again
+**3 1 2 4 5**			       Current index is 1 (element being 2) and 2 got swapped with 1 again
 
-**3 2 1 4 5**			Current index is 2 (element being 2) and 2 got swapped with 1 again
+**3 2 1 4 5**			       Current index is 2 (element being 2) and 2 got swapped with 1 again
 
 And this can keep going on again and again with 4 being swapped with 1 and then the same with 5.
 This can help introduce a bias where certain permutations will appear more often than other randomly ordered sets, instead of all permutations having an even chance.
