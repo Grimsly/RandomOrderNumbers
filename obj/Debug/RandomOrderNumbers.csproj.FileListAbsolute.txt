@@ -1,0 +1,7 @@
+I:\C#Projects\RandomOrderNumbers\bin\Debug\RandomOrderNumbers.exe.config
+I:\C#Projects\RandomOrderNumbers\bin\Debug\RandomOrderNumbers.exe
+I:\C#Projects\RandomOrderNumbers\bin\Debug\RandomOrderNumbers.pdb
+I:\C#Projects\RandomOrderNumbers\obj\Debug\RandomOrderNumbers.csprojAssemblyReference.cache
+I:\C#Projects\RandomOrderNumbers\obj\Debug\RandomOrderNumbers.csproj.CoreCompileInputs.cache
+I:\C#Projects\RandomOrderNumbers\obj\Debug\RandomOrderNumbers.exe
+I:\C#Projects\RandomOrderNumbers\obj\Debug\RandomOrderNumbers.pdb
