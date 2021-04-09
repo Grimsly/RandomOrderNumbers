@@ -12,7 +12,7 @@ namespace RandomOrderNumbers
         static void Main()
         {
             // Create a list of integeres from 1 to 10000
-            List<int> list = CreateIntList.CreateIntForList(1, 10);
+            List<int> list = CreateIntList.CreateIntForList(1, 10000);
             // Shuffle the list with the Fisher-Yates shuffle
             Shuffle.Run(list);
 

@@ -7,7 +7,7 @@ AMD Ryzen 7 3700X, 1 CPU, 16 logical and 8 physical cores
 
 
 ```
-|            Method |     Mean |    Error |   StdDev | Ratio | RatioSD |   Gen 0 |   Gen 1 | Gen 2 | Allocated |
-|------------------ |---------:|---------:|---------:|------:|--------:|--------:|--------:|------:|----------:|
-| CreateIntLinqList | 75.45 μs | 1.492 μs | 3.368 μs |  1.00 |    0.00 | 68.9697 | 17.2119 |     - | 128.51 KB |
-|  CreateIntForList | 35.30 μs | 1.201 μs | 3.540 μs |  0.48 |    0.06 | 68.9697 | 17.2119 |     - | 128.51 KB |
+|            Method |     Mean |    Error |   StdDev | Ratio |   Gen 0 |   Gen 1 | Gen 2 | Allocated |
+|------------------ |---------:|---------:|---------:|------:|--------:|--------:|------:|----------:|
+| CreateIntLinqList | 73.39 μs | 1.456 μs | 1.557 μs |  1.00 | 68.9697 | 17.2119 |     - | 128.51 KB |
+|  CreateIntForList | 31.79 μs | 0.459 μs | 0.359 μs |  0.43 | 68.9697 | 17.2119 |     - | 128.51 KB |

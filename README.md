@@ -70,3 +70,19 @@ This is to prevent bias with the same number being constantly swapped and making
 When it reaches the start of the list, the loop stops as the only element at the start of the list that can swap with it is itself.
 
 Not only was it O(n), but it actually helps make different permutations with an equal chance.
+
+Another way I made it more efficient is to use a for loop when building the list instead of using LINQ functions. As seen in the benchmarks, for loops are faster by 30 nanoseconds when creating a list from 1 to 10000. It might not seem like much, but if the list were to ever get bigger, it might be best to make it scalable.
+
+![benchmark](/screenshots/benchmark.png)
+
+For example, instead of using
+
+	Enumerable.Range(start, end).ToList();
+
+Using this is faster
+
+	List<int> list = new List<int>();
+	for (int i = start; i <= end; i++)
+	{
+		list.Add(i);
+	}
